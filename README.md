@@ -63,6 +63,8 @@ The project is a work in progress and is not yet complete.
 
 4) Rebooted the server and the app finally showed for the first time without any errors! As shown in the video, I clicked on Log In, and authorised the app through GitHub. I will now push everything to GitHub and add the env variables to Vercel, and hopefully everything will work there too.
 
+5) Deployment on Vercel now works! Next: I will look into adding post title metadata.
+
 ---
 
 ---
