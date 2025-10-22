@@ -69,6 +69,8 @@ The project is a work in progress and is not yet complete.
 
 7) To make it so when a user is not logged-in, they cannot vote: the logic is split between the `Vote` component and the `VoteButtons` component. I had to make sure the `userId` was being passed from the former to the latter (and `VoteButtons` had it in the params to accept it).
 
+8) Looking into now adding user profile pages.
+
 ---
 
 ---
