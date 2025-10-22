@@ -75,6 +75,8 @@ The project is a work in progress and is not yet complete.
 
 10) Direct link to profile fixed. Adding better styling to profile.
 
+11) Added user's posts to profile. Fixing some more styling.
+
 ---
 
 ---

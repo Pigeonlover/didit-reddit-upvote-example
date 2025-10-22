@@ -23,13 +23,19 @@ export default async function UserProfile({ params }) {
 
   return (
     <>
-      <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md space-y-4">
-        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-red-400 to-rose-800 flex items-center justify-center text-white font-bold shadow-lg text-2xl">
-          {user.name.charAt(0).toUpperCase()}
+      {/* User card */}
+      <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+        <div className="flex items-center space-x-4">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-red-400 to-rose-800 flex items-center justify-center text-white font-bold shadow-lg text-2xl">
+            {user.name.charAt(0).toUpperCase()}
+          </div>
+          <div>
+            <h2 className="text-xl font-bold text-gray-800">{user.name}</h2>
+            <p className="text-sm text-zinc-500">User ID: #{user.id}</p>
+          </div>
         </div>
-        <span className="text-xs text-zinc-400 mr-3">#{user.id}</span>{" "}
-        {user.name}
       </div>
+
       {/* User's posts */}
       <div className="mt-6 space-y-4">
         <h3 className="text-lg font-semibold text-gray-700">
@@ -42,14 +48,17 @@ export default async function UserProfile({ params }) {
         ) : (
           <ul className="space-y-2">
             {userPosts.map((post) => (
-              <li key={post.id} className="p-4 bg-gray-50 rounded-lg shadow-sm">
+              <li
+                key={post.id}
+                className="p-4 bg-rose-200 rounded-lg shadow-sm"
+              >
                 <a
                   href={`/post/${post.id}`}
-                  className="text-blue-600 hover:underline font-medium"
+                  className="text-rose-700 hover:underline font-medium"
                 >
                   {post.title}
                 </a>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-600">
                   Posted on {new Date(post.created_at).toLocaleDateString()}
                 </p>
               </li>
