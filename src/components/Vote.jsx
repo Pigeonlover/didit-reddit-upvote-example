@@ -65,6 +65,7 @@ export async function Vote({ postId, votes }) {
           downvote={downvote}
           votes={votes}
           existingVote={existingVote}
+          userId={session?.user?.id}
         />
         {/* <button formAction={upvote}>
           {existingVote?.vote === 1 ? (
