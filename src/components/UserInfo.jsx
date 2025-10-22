@@ -10,7 +10,7 @@ export async function UserInfo() {
     <div>
       {session ? (
         <div>
-          <Link href="/profile">{session.user.name}</Link>{" "}
+          <Link href={`/profile/${session.user.id}`}>{session.user.name}</Link>{" "}
           <span className="text-xs text-zinc-400 mr-3">#{session.user.id}</span>
           <LogoutButton />
         </div>
