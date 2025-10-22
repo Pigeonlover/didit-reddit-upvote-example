@@ -21,10 +21,10 @@ The project is a work in progress and is not yet complete.
 
 1. Fork the repository (check "copy the main branch only") and clone your fork to your local machine
 2. Run `npm install`
-3. Create a `.env.local` file in the root directory and add the following environment variables:
+3. Change the name of the `.env.example` file to `.env.local` in the root directory, then add the following environment variables:
    - `DATABASE_URL` - the URL of your Postgres database (eg. the Supabase connection string)
    - `AUTH_SECRET` - the Next Auth secret string (this can be anything at all like a password, but keep it secret!)
-   - `AUTH_GITHUB_ID` - the GitHub OAuth client ID (create yours in [Github developer settings](https://github.com/settings/developers)
+   - `AUTH_GITHUB_ID` - the GitHub OAuth client ID (create yours in [Github developer settings](https://github.com/settings/developers))
    - `AUTH_GITHUB_SECRET` - the GitHub OAuth client secret (create this in [Github developer settings](https://github.com/settings/developers))
 4. Create the database schema by running the SQL commands in `schema.sql` in your database (eg. by running the commands in Supabase Query Editor)
 5. Run `npm run dev` to start the development server
@@ -32,7 +32,7 @@ The project is a work in progress and is not yet complete.
 
 ## Potential future features
 
-- [ ] User profiles
+- [x] User profiles
 - [ ] Sorting posts by recent (date posted), top (most upvotes), and most controversial (most upvotes _and_ downvotes)
 - [ ] User karma scores
 - [ ] User badges / trophies (awards for achievements like number of posts, years on the site, etc.)
@@ -80,3 +80,30 @@ The project is a work in progress and is not yet complete.
 ---
 
 ---
+
+## What did I achieve?
+
+- I successfully forked another project to make a copy for me to edit.
+- I familiarised myself with someone else's code and learned to work with it. Looked over the structure, folders, components, etc... To see what there is already and roughly how everything is working together.
+- I learned about Next Auth and how to implement it with GitHub. I successfully deployed the app on Vercel by correctly editing the environment variables.
+- I added metadata in the `layout` and dynamically generated metadata for individual posts.
+- Added an error message that shows on the page if you're not logged-in instead of the upvote and downvote buttons, so you cannot do those actions accidentally.
+- Added a profile page that shows a cute avatar (just a simple circle with the user's initial in it), their username, and id number. Then, underneath, a list of their posts. Later on, I plan to add a list for comments, too.
+
+---
+
+## What wasn't I happy with?
+
+Not much. I actually thought this assignment would go much worse than it actually has. I was worried from the beginning (being able to deploy it on Vercel and make it workable), but once I actually got stuck in there, it all went surprisingly smoothly (the YouTube video was a massive help).
+
+I guess a negative is that I didn't manage to do any other additions to the app after the profile page. But that's mainly from the time finishing, rather than thinking I am not able to.
+
+---
+
+## References
+
+Curiously I didn't use many references for this, as it felt like I kinda knew everything needed already. I looked back at the demos from Manny for a revision on Metadata and such.
+
+Also the YouTube video for the GitHub authorisation was essential. --> https://www.youtube.com/watch?v=H-1ozULYdyc
+
+As always, Tailwind docs because there's just so much and one cannot possibly have it all memorised in their brain XD --> https://tailwindcss.com/docs/styling-with-utility-classes
