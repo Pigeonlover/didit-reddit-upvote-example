@@ -71,6 +71,10 @@ The project is a work in progress and is not yet complete.
 
 8) Looking into now adding user profile pages.
 
+9) Added a direct link to own profile on the username at the top (in the header). However, link is not working. Looking into fixing it.
+
+10) Direct link to profile fixed. Adding better styling to profile.
+
 ---
 
 ---
