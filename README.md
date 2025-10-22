@@ -46,3 +46,23 @@ The project is a work in progress and is not yet complete.
 - [ ] User following
 - [ ] User feed (posts from users you follow)
 - [ ] User flair
+
+---
+
+---
+
+---
+
+## Dev Logs
+
+1. Familiarised myself with the app and looked over the folders/code.
+
+2. I watched the YouTube video and worked along to create a GitHub App for OAuth. I added the strings needed to my `.env.local` file.
+
+3. Ran the SQL schema on Supabase's SQL Editor. I grabbed the database link and added it to the `.env.local` file.
+
+4) Rebooted the server and the app finally showed for the first time without any errors! As shown in the video, I clicked on Log In, and authorised the app through GitHub. I will now push everything to GitHub and add the env variables to Vercel, and hopefully everything will work there too.
+
+---
+
+---
