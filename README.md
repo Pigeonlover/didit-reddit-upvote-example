@@ -65,6 +65,8 @@ The project is a work in progress and is not yet complete.
 
 5) Deployment on Vercel now works! Next: I will look into adding post title metadata.
 
+6) Added dynamic metadata for individual posts' titles.
+
 ---
 
 ---

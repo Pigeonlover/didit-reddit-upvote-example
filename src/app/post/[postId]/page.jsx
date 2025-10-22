@@ -3,6 +3,33 @@ import { CommentList } from "@/components/CommentList";
 import { Vote } from "@/components/Vote";
 import { db } from "@/db";
 
+// Dynamic metadata
+export async function generateMetadata({ params }) {
+  const postId = params.postId;
+
+  // Query the post by id
+  const { rows: posts } = await db.query(
+    `SELECT posts.id, posts.title
+     FROM posts
+     WHERE posts.id = $1
+     LIMIT 1;`,
+    [postId]
+  );
+
+  const post = posts[0];
+
+  return {
+    title: `Post - ${postId}`,
+    description: post?.title ?? "Post not found",
+    openGraph: {
+      title: `Post - ${postId}`,
+      description: post?.title ?? "Post not found",
+      type: "website",
+      url: `https://didit-reddit-upvote-example-1qrigq2u7.vercel.app/post/${postId}`,
+    },
+  };
+}
+
 export default async function SinglePostPage({ params }) {
   const postId = params.postId;
 

@@ -8,8 +8,14 @@ import { Providers } from "@/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Didit",
+  title: "Didit App",
   description: "A social app like Reddit or Hacker News",
+  openGraph: {
+    title: "Didit App",
+    description: "A social platform to share your thoughts!",
+    type: "website",
+    url: "https://didit-reddit-upvote-example-1qrigq2u7.vercel.app/",
+  },
 };
 
 export default async function RootLayout({ children }) {
